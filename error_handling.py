@@ -26,10 +26,10 @@ def normalize_vowels(word):
     return word.translate(normalize)
 
 def read_csv():
-    with open("./words.txt", "r", encoding="utf-8") as file:
+    with open("words.txt", "r", encoding="utf-8") as file:
         words=[(normalize_vowels(word).lower().strip()) for word in file]
         return {"easy": [word for word in words if len(word) < 7],
-                "medium":[word for word in words if len(word) < 10],
+                "medium":[word for word in words if len(word) > 7 and len(word) < 10],
                 "hard": [word for word in words if len(word)>=  10]
                 }
 
@@ -62,19 +62,23 @@ def run():
     print(logo)
     print(instructions)
     word = choose_level()
-    hide_word = len(word) * "_ "
     lifes = 10
-    print(f"{hide_word} -- {len(word)} letras")
-    
+    new_word =["_" for _ in range(len(word))]
     while lifes > 0:
-        new_word = [] 
-        print(f"{new_word}")
+        hidden_word=" ".join(new_word)
         print(f"{lifes} vidas")
+        print(f"{hidden_word} -- {len(word)} letras")
         letter = input("""Adivina la palabra, ingrese un caracter válido:""")
 
     # https://www.programiz.com/python-programming/methods/string/isalpha
         if letter.isalpha() and len(letter) == 1:
-            print(word)
+            for index in range(len(word)):
+                if letter == word[index]:
+                    new_word[index]=letter
+            if letter not in new_word:    
+                    lifes-=1
+                # if letter == random_word[index]:
+                    # new_word.append(letter)
             # print(new_word)
             
         else:
@@ -85,3 +89,4 @@ def run():
 
 if __name__ == '__main__':
     run()
+ 
