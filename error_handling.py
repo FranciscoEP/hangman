@@ -9,8 +9,11 @@ logo =  """
 ██║░░██║██║░░██║██║░╚███║╚██████╔╝██║░╚═╝░██║██║░░██║██║░╚███║
 ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝
 
+
 Made by Daniel Ramírez and Francisco Ponce
 """
+# Made by Daniel Ramírez and Francisco Ponce
+
 instructions ="""
 Instrucciones: seleccione un nivel para jugar.
 
