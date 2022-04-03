@@ -1,4 +1,102 @@
 import random
+import os
+from time import sleep
+def dibujo_hangman(oportunidad):
+    hangman={
+  0:'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''',
+ 1:       
+'''
+ +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''',
+        
+   2:'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''',
+     3:   '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''',
+  4:'''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', 
+    5:    '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''',
+        6:'''
+  
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''',
+7:'''
+  +---+
+      |
+      |
+      |
+      |
+      |
+=========
+''',
+8:'''
+      |
+      |
+      |
+      |
+      |
+=========
+''',
+9:""" 
+      
+      
+      
+      
+=========""",
+10:""
+    }
+        
+
+    return print(hangman[oportunidad])
+
+def limpiar_pantalla():
+    if os.name == 'posix':
+        return os.system('clear')
+    else:
+        return os.system('cls')
+
 def sin_acentos(palabra):
     '''
     La funcion sin_acentos regresa una palabra sin tildes que anteriormente contenia
@@ -14,8 +112,8 @@ def leer_archivo():
     '''
     with open("./words.txt", "r", encoding="utf-8") as file:
         lista_palabras= [sin_acentos(i.strip().lower()) for i in file]
-        lista_nivel={'facil': [i for i in lista_palabras if len(i)<6],
-                     'medio': [i for i in lista_palabras if 9>len(i)>6],
+        lista_nivel={'facil': [i for i in lista_palabras if len(i)<7],
+                     'medio': [i for i in lista_palabras if 9>len(i)>7],
                      'dificil': [i for i in lista_palabras if len(i)>9]
                     }
         return(lista_nivel)        
@@ -49,26 +147,40 @@ def selecciona_palabra(n):
         palabra= random.choice(lectura['dificil'])
         descubierto=[' ? ' for i in palabra ]
         
-        
-    flg=0    
+
+
     oportunidades= 10
     while oportunidades > 0:
+        if palabra == "".join(descubierto).lower():
+            print("""
+
+██╗ ██╗░░██╗░█████╗░░██████╗  ░██████╗░░█████╗░███╗░░██╗░█████╗░██████╗░░█████╗░██╗
+╚═╝ ██║░░██║██╔══██╗██╔════╝  ██╔════╝░██╔══██╗████╗░██║██╔══██╗██╔══██╗██╔══██╗██║
+██╗ ███████║███████║╚█████╗░  ██║░░██╗░███████║██╔██╗██║███████║██║░░██║██║░░██║██║
+██║ ██╔══██║██╔══██║░╚═══██╗  ██║░░╚██╗██╔══██║██║╚████║██╔══██║██║░░██║██║░░██║╚═╝
+██║ ██║░░██║██║░░██║██████╔╝  ╚██████╔╝██║░░██║██║░╚███║██║░░██║██████╔╝╚█████╔╝██╗
+╚═╝ ╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░  ░╚═════╝░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝
+""")
+            return print('la palabra es:', palabra)
         print(descubierto, "---", len(palabra), "letras,", oportunidades, 'vidas\n')
-        letra = input("Adivina la palabra, ingrese un caracter válido: ")    
-        if letra.isalpha() and len(letra) == 1:
-            for index in range(len(palabra)):
-                if letra == palabra[index]:
-                    descubierto[index]=letra
-                    flg=flg+1
-                    if flg==len(palabra):
-                        return ('la palabra es:', palabra, 'Ganaste!')
-            if letter not in palabra:
+        dibujo_hangman(oportunidades)
+        letra = input("Adivina la palabra, ingrese un caracter válido: ").lower()   
+
+        if letra not in palabra and letra.isalpha() and len(letra) == 1:
+                limpiar_pantalla()
                 oportunidades-=1
-                print ('La letra',letter,'no pertenece a la palabra. Aun tienes', oportunidades, 'oportunidades más')
+                print ('La letra',letra,'no pertenece a la palabra. Aun tienes', oportunidades, 'oportunidades más') 
+
+        if letra.isalpha() and len(letra) == 1:
+            for indice in range(len(palabra)):
+                if letra == palabra[indice]:
+                    descubierto[indice]=letra.upper()
+                    limpiar_pantalla()
         else:
             print("Opcion no valida: has ingresado un caracter no valido, intenta de nuevo")
     else:
-        return('perdiste')
+        dibujo_hangman(oportunidades)
+        return print(f"Perdiste, la palabra era: {palabra}")
 
 Intrucciones= """
 Instrucciones: seleccione un nivel para jugar.
@@ -93,10 +205,16 @@ def inicio():
 """
     print(logo)
     print(Intrucciones)
-    nivel= int(input("\n\nEscoge tu nivel"))
-    while nivel==1 or nivel==2 or nivel==3:
+    try: 
+        nivel= int(input("\n\nEscoge tu nivel ")) 
+        if nivel==1 or nivel==2 or nivel==3:
             return selecciona_palabra(nivel)
-    else:
+        else:
+            raise ValueError
+        #if nivel!=1 or nivel!=2 or nivel!=3 or nivel==str:
+            #print('el valor ingresado no es correcto. Intenta de nuevo')
+            #return inicio()
+    except ValueError:
         print('el valor ingresado no es correcto. Intenta de nuevo')
         return inicio()
 inicio()
