@@ -1,2 +1,71 @@
 
-# Prueba
+# Proyecto Hangman (Ahorcado)
+
+## Contenido
+
+### Introducción
+### Objetivos del programa
+### 
+###
+
+## Introducción
+
+Hangman (“ahorcado”) es un juego para dos personas donde la meta de un jugador (J1) es adivinar la palabra que 
+ha pensado el otro jugador(J2). La palabra pensada ha sido expresada por medio de guiones bajos que en cantidad 
+son las mismas que conforman la palabra pensada(ej. una palabra de 6 letras tendrá 6 guiones bajos).
+   El juego se desarrolla mientras el jugador J1 va dictando la letra que cree esta contenida en la palabra y, 
+si se encuentra, el jugador J2 ocupará los guiones como posiciones donde se encuentra la letra dictada. 
+   Si la letra dictada no se encuentra en la palabra, el jugador J2 empezara a dibujar por partes la silueta de
+un hombre ahorcado, empezando por la columna y terminando con la cabeza, las partes estan descritas en el pseudo-
+código que está en el repositorio.
+
+En este programa, el jugador J1 esta representado por el usuario y el jugador J2 por el programa. El usuario en 
+cada juego tendrá 10 intentos para completar todas las letras que conforman a la palabra por medio de entrada por
+teclado. No se admiten caracteres numéricos, espacios ni signos ortográficos, únicamente las letras del abeceda-
+rio son admisibles. El usuario gana la partida si logra coincidir las letras que ingresó contra las que conforman
+la palabra antes de terminarse la cantidad de oportunidades que tiene por cada juego. 
+
+
+## Objetivos del programa
+
+#### 1. 
+#### 2.
+#### 3.
+
+
+# Contenido del repositorio
+
+El repositorio cuenta con el proyecto en formato .ipynb y en formato .py, este último es el que se usará como el
+ejecutable del program. También contiene el archivo de texto que surte las palabras para que se desarrolle el juego.
+Además del diagrama de flujo por el cual nos basamos para elaborar el proyecto.
+Las carpetas...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
