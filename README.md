@@ -3,8 +3,8 @@
 
 # Proyecto Hangman (Ahorcado)
 
-*Daniel Ramírez*
-*Francisco Ponce*
+- *Daniel Ramírez*
+- *Francisco Ponce*
 
 *[Data Analytics, México a 4 de abril 2022]*
 ## Contenido
