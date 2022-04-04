@@ -2,11 +2,11 @@
 # Proyecto Hangman (Ahorcado)
 
 ## Contenido
-
-### Introducción
-### Objetivos del programa
-### 
-###
+- [Introducción](#project-description)
+- [Objetivos del programa](#rules)
+- [Contenido del repositorio](#workflow)
+- [Organization](#organization)
+- [Links](#links)
 
 ## Introducción
 
@@ -41,6 +41,11 @@ Además del diagrama de flujo por el cual nos basamos para elaborar el proyecto.
 Las carpetas...
 
 
+## Links
+
+[Flujo de trabajo](https://lucid.app/lucidchart/471bc5f8-297c-42c7-8860-0945a2a78e9f/edit?invitationId=inv_14efcd87-82ca-4f84-afba-86d20796dbb7&referringApp=slack#)  
+[Pseudocódigo](https://docs.google.com/document/d/1OX07BruAEH_KtiHDkboYBDaLUfI2RaPXt6fCERQ9p0U/edit)  
+[Slides](https://docs.google.com/presentation/d/1XxSIoisNOwXswloXvkFB2z95bezzJsN8Cwmb8ulH2Xs/edit?usp=sharing)  
 
 
 
