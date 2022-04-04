@@ -1,8 +1,9 @@
 
 # Proyecto Hangman (Ahorcado)
 <img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
-*Daniel Ramírez*
-*Francisco Ponce*
+
+- *Daniel Ramírez*.
+- *Francisco Ponce*.
 
 *[Data Analytics, México & 4 de abril 2022]*
 
