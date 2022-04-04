@@ -1,6 +1,10 @@
 
+<img src="https://bit.ly/2VnXWr2" alt="Ironhack Logo" width="100"/>
 # Proyecto Hangman (Ahorcado)
+*Daniel Ramírez*
+*Francisco Ponce*
 
+*[Data Analytics, México & 4 de abril 2022]*
 ## Contenido
 - [Introducción](#introducción)
 - [Objetivos del programa](#objetivos-del-programa)
