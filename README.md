@@ -10,9 +10,8 @@
 
 
 - [Introducción](#introducción)
-- [Descripción del proyecto](#descripción-del-proyecto)
-- [Contenido del repositorio](#contenido-del-repositorio)
 - [Flujo de trabajo](#flujo-de-trabajo)
+- [Contenido del repositorio](#contenido-del-repositorio)
 - [Links](#links)
 
 
@@ -64,8 +63,11 @@ Las carpeta Legacy_code contiene el código que se hizo previamente antes de lle
 carpeta .ipynb_checkpoints contiene todas las modificaciones realizadas durante el proyecto. 
 
 
+## Links
 
-
+[Flujo de trabajo](https://lucid.app/lucidchart/471bc5f8-297c-42c7-8860-0945a2a78e9f/edit?invitationId=inv_14efcd87-82ca-4f84-afba-86d20796dbb7&referringApp=slack#)  
+[Pseudocódigo](https://docs.google.com/document/d/1OX07BruAEH_KtiHDkboYBDaLUfI2RaPXt6fCERQ9p0U/edit)  
+[Slides](https://docs.google.com/presentation/d/1XxSIoisNOwXswloXvkFB2z95bezzJsN8Cwmb8ulH2Xs/edit?usp=sharing)  
 
 
 
