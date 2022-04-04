@@ -2,10 +2,9 @@
 # Proyecto Hangman (Ahorcado)
 
 ## Contenido
-- [Introducción](#project-description)
-- [Objetivos del programa](#rules)
-- [Contenido del repositorio](#workflow)
-- [Organization](#organization)
+- [Introducción](#introducción)
+- [Objetivos del programa](#objetivos-del-programa)
+- [Contenido del repositorio](#contenido-del-repositorio)
 - [Links](#links)
 
 ## Introducción
